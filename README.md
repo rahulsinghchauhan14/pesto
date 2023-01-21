@@ -1,20 +1,23 @@
 # week 1
 
 Q. When a user enters an URL in the browser, how does the browser fetch the desired result ?
-Ans. When a user enters an URL in the browser, the browser first checks its cache for the DNS entry to find the corresponding IP address of the website (domain). It checks different levels of cache starting with its own 
-- browser cache, 
-- then operating system's cache, 
-- router cache and 
-- ISP (Internet Service Provider) cache. 
-If the address is not found in any of these caches, the ISP's DNS server initiates a DNS query to find the IP address of the server that hosts the domain name.
+
+    Ans. When a user enters an URL in the browser, the browser first checks its cache for the DNS entry to find the corresponding IP address of the website (domain). It checks different levels of cache starting with its own 
+
+    - browser cache, 
+    - then operating system's cache, 
+    - router cache and 
+    - ISP (Internet Service Provider) cache. 
+
+    If the address is not found in any of these caches, the ISP's DNS server initiates a DNS query to find the IP address of the server that hosts the domain name.
 
 <img src="assets/dns-resolver.png" alt="drawing" width="800px"/>
 
-Once the IP address is obtained, the browser sends a request to the server using the TCP (Transfer Control Protocol) connection, which is established by sending synchronize (SYN) and acknowledge (ACK) messages.
+    Once the IP address is obtained, the browser sends a request to the server using the TCP (Transfer Control Protocol) connection, which is established by sending synchronize (SYN) and acknowledge (ACK) messages.
 
 <img src="assets/ack-syn.png" alt="drawing" width="800px"/>
 
-The browser then sends an HTTP request, either GET or POST, to the web server. The server on the host computer handles the request and sends back a response in a format such as JSON, XML, or HTML. The server also sends out an HTTP response in a format such as JSON, XML or HTML. The server also sends out an HTTP response along with the status of the response. The browser then displays the HTML content and the process is completed.
+    The browser then sends an HTTP request, either GET or POST, to the web server. The server on the host computer handles the request and sends back a response in a format such as JSON, XML, or HTML. The server also sends out an HTTP response in a format such as JSON, XML or HTML. The server also sends out an HTTP response along with the status of the response. The browser then displays the HTML content and the process is completed.
 
 <img src="assets/user-browser-req.png" alt="drawing" width="800px"/>
 
